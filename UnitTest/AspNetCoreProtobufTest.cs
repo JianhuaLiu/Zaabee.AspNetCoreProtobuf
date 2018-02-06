@@ -24,7 +24,7 @@ namespace UnitTest
         }
 
         [Fact]
-        public async Task Test1()
+        public async Task Test()
         {
             // Act
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/x-protobuf"));
