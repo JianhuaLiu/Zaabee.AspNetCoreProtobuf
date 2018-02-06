@@ -95,7 +95,7 @@ Modify the default controller which named ValuesController to return the dto
 
 ### Test Project
 
-Create a XUnit project and get Microsoft.AspNetCore.TestHost from nuget
+Create an XUnit project and get Microsoft.AspNetCore.TestHost from nuget
 
     Install-Package Microsoft.AspNetCore.TestHost
 
