@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageVersion>0.0.1</PackageVersion>
+    <Authors>Mutuduxf</Authors>
+    <Company>Mutuduxf</Company>
+    <PackageTags>Zaabee asp.net core protobuf</PackageTags>
+    <PackageProjectUrl>https://github.com/Mutuduxf/Zaabee.AspNetCoreProtobuf</PackageProjectUrl>
+    <Description>Protobuf formatters for asp.net core</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.0.0" />
+    <PackageReference Include="protobuf-net" Version="2.3.6" />
+  </ItemGroup>
+</Project>
