@@ -19,6 +19,7 @@ namespace Demo.Controllers
                     Tag = long.MaxValue,
                     CreateTime = DateTime.Now,
                     Name = "0",
+                    Enum = TestEnum.Apple,
                     Kids = new List<TestDto>
                     {
                         new TestDto
@@ -27,6 +28,7 @@ namespace Demo.Controllers
                             Tag = long.MaxValue - 1,
                             CreateTime = DateTime.Now,
                             Name = "00",
+                            Enum = TestEnum.Banana
                         },
                         new TestDto
                         {
@@ -34,6 +36,7 @@ namespace Demo.Controllers
                             Tag = long.MaxValue - 2,
                             CreateTime = DateTime.Now,
                             Name = "01",
+                            Enum = TestEnum.Pear
                         }
                     }
                 },
@@ -43,6 +46,7 @@ namespace Demo.Controllers
                     Tag = long.MaxValue - 3,
                     CreateTime = DateTime.Now,
                     Name = "1",
+                    Enum = TestEnum.Apple,
                     Kids = new List<TestDto>
                     {
                         new TestDto
@@ -51,6 +55,7 @@ namespace Demo.Controllers
                             Tag = long.MaxValue - 4,
                             CreateTime = DateTime.Now,
                             Name = "10",
+                            Enum = TestEnum.Banana
                         },
                         new TestDto
                         {
@@ -58,6 +63,7 @@ namespace Demo.Controllers
                             Tag = long.MaxValue - 5,
                             CreateTime = DateTime.Now,
                             Name = "11",
+                            Enum = TestEnum.Pear
                         }
                     }
                 }
