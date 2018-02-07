@@ -1,6 +1,6 @@
 # Zaabee.AspNetCoreProtobuf
 
-Protobuf extensions for asp.net core
+Protobuf formatters for asp.net core
 
 ## QuickStart
 
