@@ -9,8 +9,8 @@ namespace Zaabee.AspNetCoreProtobuf
     public class ProtobufInputFormatter : InputFormatter
     {
         private static readonly Lazy<RuntimeTypeModel> model = new Lazy<RuntimeTypeModel>(CreateTypeModel);
- 
-        public static RuntimeTypeModel Model => model.Value;
+
+        private static RuntimeTypeModel Model => model.Value;
 
         public override Task<InputFormatterResult> ReadRequestBodyAsync(InputFormatterContext context)
         {
@@ -27,7 +27,6 @@ namespace Zaabee.AspNetCoreProtobuf
         {
             return true;
         }
- 
  
         private static RuntimeTypeModel CreateTypeModel()
         {

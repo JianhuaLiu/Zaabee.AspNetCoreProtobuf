@@ -10,21 +10,11 @@ namespace Zaabee.AspNetCoreProtobuf
     {
         private static readonly Lazy<RuntimeTypeModel> model = new Lazy<RuntimeTypeModel>(CreateTypeModel);
 
-        public string ContentType { get; private set; }
+        private static RuntimeTypeModel Model => model.Value;
 
-        public static RuntimeTypeModel Model => model.Value;
-
-        public ProtobufOutputFormatter()
+        public ProtobufOutputFormatter(string contentType)
         {
-            ContentType = "application/x-protobuf";
-            SupportedMediaTypes.Add(MediaTypeHeaderValue.Parse("application/x-protobuf"));
-        }
-
-        private static RuntimeTypeModel CreateTypeModel()
-        {
-            var typeModel = TypeModel.Create();
-            typeModel.UseImplicitZeroDefaults = false;
-            return typeModel;
+            SupportedMediaTypes.Add(MediaTypeHeaderValue.Parse(contentType));
         }
 
         public override Task WriteResponseBodyAsync(OutputFormatterWriteContext context)
@@ -33,6 +23,13 @@ namespace Zaabee.AspNetCoreProtobuf
 
             Model.Serialize(response.Body, context.Object);
             return Task.FromResult(response);
+        }
+
+        private static RuntimeTypeModel CreateTypeModel()
+        {
+            var typeModel = TypeModel.Create();
+            typeModel.UseImplicitZeroDefaults = false;
+            return typeModel;
         }
     }
 }
