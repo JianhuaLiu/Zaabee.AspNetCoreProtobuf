@@ -57,7 +57,7 @@ namespace UnitTest
                 var dtoOne = lstOne[i];
                 var dtoTwo = lstTwo[i];
                 if (dtoOne.Id != dtoTwo.Id || dtoOne.CreateTime != dtoTwo.CreateTime || dtoOne.Enum != dtoTwo.Enum ||
-                    dtoOne.Name != dtoTwo.Name || dtoOne.Tag != dtoTwo.Tag || CompareDtos(dtoOne.Kids, dtoTwo.Kids))
+                    dtoOne.Name != dtoTwo.Name || dtoOne.Tag != dtoTwo.Tag || !CompareDtos(dtoOne.Kids, dtoTwo.Kids))
                     return false;
             }
 
