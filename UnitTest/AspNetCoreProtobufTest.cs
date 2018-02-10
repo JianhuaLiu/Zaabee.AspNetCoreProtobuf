@@ -34,10 +34,10 @@ namespace UnitTest
             var stream = new MemoryStream();
             ProtoBuf.Serializer.Serialize(stream, dtos);
 
-            HttpContent data = new StreamContent(stream);
+            HttpContent httpContent = new StreamContent(stream);
 
             // HTTP POST with Protobuf Request Body
-            var responseForPost = _client.PostAsync("api/Values", data);
+            var responseForPost = _client.PostAsync("api/Values", httpContent);
 
             var result = ProtoBuf.Serializer.Deserialize<List<TestDto>>(
                 responseForPost.Result.Content.ReadAsStreamAsync().Result);

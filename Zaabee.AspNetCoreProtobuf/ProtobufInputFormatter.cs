@@ -18,7 +18,6 @@ namespace Zaabee.AspNetCoreProtobuf
             var request = context.HttpContext.Request;
             MediaTypeHeaderValue.TryParse(request.ContentType, out _);
  
- 
             var result = Model.Deserialize(context.HttpContext.Request.Body, null, type);
             return InputFormatterResult.SuccessAsync(result);
         }
